@@ -26,6 +26,8 @@
 </template>
   
 <script>
+import { eventBus } from '../../../main';
+
 export default {
     data() {
         return {
