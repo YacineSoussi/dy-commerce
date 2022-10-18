@@ -1,7 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
+import * as Filters from './utils/filters';
 
 Vue.config.productionTip = false
+
+Object.keys(Filters).forEach(key => {
+  Vue.filter(key, Filters[key]);
+});
 
 export const eventBus = new Vue({
   data: {
